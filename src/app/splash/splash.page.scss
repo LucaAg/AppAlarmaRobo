@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Laila&display=swap');
+@-webkit-keyframes blur-out-expand{0%{-webkit-filter:blur(.01);filter:blur(.01)}100%{letter-spacing:1em;-webkit-filter:blur(12px) opacity(0);filter:blur(12px) opacity(0)}}@keyframes blur-out-expand{0%{-webkit-filter:blur(.01);filter:blur(.01)}100%{letter-spacing:1em;-webkit-filter:blur(12px) opacity(0);filter:blur(12px) opacity(0)}}
+.container-h
+{
+    -webkit-animation:blur-out-expand 1.5s cubic-bezier(.25,.46,.45,.94) 3.5s both;animation:blur-out-expand 1.5s cubic-bezier(.25,.46,.45,.94) 3.5s both;
+    h1, h2{
+
+        font-family: 'Concert One', cursive;
+        color: #ececec;
+        text-align: center;
+        font-size: 35px;
+    }
+}
+
+h1
+{
+    margin-top: 190px;
+}
+h2
+{
+    margin-top: 65px;
+}
+
+@-webkit-keyframes vibrate-3{0%{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}30%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}50%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}60%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}70%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}90%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}@keyframes vibrate-3{0%{-webkit-transform:translate(0);transform:translate(0)}10%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}30%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}50%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}60%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}70%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}90%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
+.container
+{
+    -webkit-animation:vibrate-3 .5s linear 1.5s infinite both;animation:vibrate-3 .5s linear 1.5s infinite both;
+    img
+    {
+        height: 165px;
+        width: 145px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+ion-content
+{
+   //--background: linear-gradient(to bottom,#2B8C6F,#0A0909); 
+   --background: #E05858;
+}

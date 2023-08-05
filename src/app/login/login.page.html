@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true" slot="fixed" vertical="top" horizontal="end">
+  <div class="contenedor-content">
+    <form (ngSubmit)="getLogin()">
+      <H1>Iniciar sesión</H1>
+      <ion-label>INGRESAR CÓMO:</ion-label>
+        <ion-list class="usuarios">
+          <ion-radio-group (ionChange)="insertarAccesosRapidos($event)" [allowEmptySelection]="true">
+            <ion-item class="radio">
+              <ion-radio labelPlacement="end" justify="start" value="admin">Administrador</ion-radio>
+            </ion-item>
+   
+            <ion-item class="radio ion-text-center">
+              <ion-radio labelPlacement="end" justify="start" value="invitado">Invitado</ion-radio>
+            </ion-item>
+  
+            <ion-item class="radio">           
+              <ion-radio labelPlacement="end" justify="start" value="usuario">Usuario</ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+        <div class="container-seguridad">
+          <img class="imagen-seguridad" src="/assets/imagenes/seguridad.png" alt="">
+        </div>
+      <ion-item>
+        <ion-icon name="mail-open-outline"></ion-icon>
+        <ion-input [formControl]="email" name="email" type="email" [(ngModel)]="emailBind" placeholder="Correo electrónico"></ion-input>     
+      </ion-item>
+      <div class="contenedor-span" [hidden]="email.valid || email.pristine">
+        <span *ngIf="email.errors?.['required']">*El correo electrónico es obligatorio*</span>
+        <span *ngIf="email.errors?.['email']">*Correo electrónico no válido (debe contener '@' y '.')*</span>
+      </div>
+      <br>
+      <ion-item>    
+          <ion-icon name="key-outline"></ion-icon>     
+          <ion-input [formControl]="clave" name="clave" type="password" [(ngModel)]="claveBind" placeholder="Contraseña"></ion-input>               
+      </ion-item>
+      <div [hidden]="clave.valid || clave.pristine" class="contenedor-span">
+        <span *ngIf="clave.errors?.['required']">*La clave es obligatoria*</span>
+        <span *ngIf="clave.errors?.['minlength']">*La clave debe tener mas de 6 carácteres*</span>
+      </div>
+      <br>
+      <ion-button class="boton-ingresar" expand="block" type="submit" shape="round">
+        Ingresar
+      </ion-button>
+    </form>  
+  </div>
+</ion-content>

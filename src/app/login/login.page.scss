@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bruno+Ace&family=Bubblegum+Sans&family=Cabin+Sketch:wght@700&family=Concert+One&family=Josefin+Sans:ital@1&family=Laila&family=Monoton&display=swap');
+
+
+*
+{
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+ion-content
+{
+    --background: rgb(85, 99, 129)   ;
+}
+
+h1, ion-label
+{
+    color: white;
+
+}
+
+.contenedor-span{
+    width: 90%;
+    height: 100%;
+    border: 1px solid red;
+    background-color: #ffc4c4;
+}
+
+span{
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+form
+{
+    width: 90%;
+    height: 95%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    border-color: rgb(2, 1, 7);
+    background-color: rgb(105, 99, 161);
+    border-style: double;
+    box-shadow: 2px 20px 50px rgba(1, 1, 1, 0.5);
+}
+.container-seguridad
+{
+    width: 70%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    @-webkit-keyframes vibrate-2{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}60%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}@keyframes vibrate-2{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}40%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}60%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}80%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
+    .imagen-seguridad
+    {
+      -webkit-animation:vibrate-2 .3s linear infinite both;animation:vibrate-2 .3s linear infinite both;
+      width: 40%;
+      height: 40%;
+    }
+}
+
+.radio
+{
+    width: 100%;
+    margin-left: 0;
+    font-family: 'Bungee', cursive;
+    color: #ffb0f4;
+    padding: 0;
+    text-align: center;
+    border-radius: 20px;
+    border-color: aliceblue;
+    border-style: double;
+}
+
+ion-item
+{
+    width: 90%;
+    height: 100%;
+    border-radius: 40px;
+    margin: 5px;
+}
+
+.usuarios
+{
+    background-color: transparent;
+    width: 70%;
+    height: 100%;
+}
+
+ion-radio
+{
+    --color: #f700d6;
+    --color-checked: #f700d6;
+    border-color: aliceblue;
+    border-radius: 20px;
+    height: 100%;
+}
+
+ion-radio:active
+{
+    color: #f700d6;
+}
+
+ion-content
+{
+    --overflow: hidden !important;
+    --overscroll-behavior-y: none !important;
+}
+
+@media screen and (orientation: landscape) {
+    ion-content {
+    --overflow: auto !important;
+    --overscroll-behavior-y: contain !important;
+    }
+}
+
+.boton-ingresar
+{
+    margin-bottom: 30px;
+}
+
+
+
+ion-icon
+{
+    width: 10%;
+    height: 40%;
+    margin-right: 12px;
+}
+
+ion-item{
+    width: 90%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+ion-button
+{
+    width: 80%;
+}
+
+ion-input
+{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+}
+

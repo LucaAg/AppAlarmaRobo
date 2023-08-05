@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true">
+  <ion-fab  horizontal="center" vertical="bottom">
+    <ion-fab-button>      
+        <ion-icon name="log-out"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <div class="contenedor-cerrar-sesion">
+        <ion-fab-button (click)="cerrarSesion()">
+          <img  class="imagen-salida" src="/assets/imagenes/puerta-de-salida.png" alt="">
+        </ion-fab-button>
+      </div>
+    </ion-fab-list>
+  </ion-fab>
+  <div class="contenedor-general" >
+    <div class="h1-container">
+      <h1 class="h1-estado">{{estadoBoton}}</h1>
+    </div>
+    <!-- *************************** MODAL *************************** -->
+
+   <div  class="boton-redondo" >
+    <ion-button  class="pushable" [ngStyle]="{'background-color':cambiarColorBoton(),'box-shadow':cambiarShadow()}" (click)="iniciarDetector()" (click)="manjeadorBoton()">
+      <img class="imagenBoton" src="{{imagenBoton}}" alt="imagen boton">
+    </ion-button> 
+  </div>  
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <div class="wrapper">
+        <h1 class="h1-modal">
+          INGRESE SU CONTRASEÑA
+        </h1>
+        <p class="p-modal">
+          Estimado {{emailRecuperado}}, si su contraseña no es la correcta se tomarán medidas drásticas!
+        </p>
+          
+          
+          <div class="contenedor-input">
+            <ion-input class="input-modal" placeholder=" Ingresar contraseña" [(ngModel)]="clave" name="clave" type="password" requiered></ion-input>
+          </div>
+          <div class="div-button-modal">
+            <ion-button  class="div-button-modal" type="submit"
+              class="btn btn-success button-modal" (click)="desactivarAlarma()">
+              Confirmar
+            </ion-button>
+          </div>
+     
+      </div>
+    </ng-template>
+  </ion-modal>
+  </div>
+</ion-content>
